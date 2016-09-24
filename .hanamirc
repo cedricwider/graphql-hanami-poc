@@ -1,0 +1,4 @@
+project=graphql
+architecture=container
+test=rspec
+template=haml
