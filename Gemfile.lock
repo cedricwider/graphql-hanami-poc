@@ -39,6 +39,7 @@ GEM
       dry-equalizer (~> 0.2)
       dry-logic (~> 0.3, >= 0.3.0)
       dry-types (~> 0.8, >= 0.8.1)
+    graphql (0.18.15)
     haml (4.0.7)
       tilt
     hanami (0.8.0)
@@ -129,6 +130,7 @@ DEPENDENCIES
   bundler
   capybara
   dotenv (~> 2.0)
+  graphql
   haml
   hanami (~> 0.8)
   hanami-model (~> 0.6)
