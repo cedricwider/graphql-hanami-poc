@@ -1,2 +1,4 @@
 /public/assets*
 /tmp
+/.idea/
+.idea/workspace.xml
