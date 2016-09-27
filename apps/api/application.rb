@@ -1,8 +1,5 @@
 require 'hanami/helpers'
 require 'hanami/assets'
-require 'graphql'
-
-require_relative 'types/all_types'
 
 module Api
   class Application < Hanami::Application
@@ -14,18 +11,9 @@ module Api
       #
       load_paths << [
         'controllers',
-        'views'
+        'types'
       ]
       routes 'config/routes'
-      layout :application # It will load Api::Views::ApplicationLayout
-      templates 'templates'
-      assets do
-        javascript_compressor :builtin
-        stylesheet_compressor :builtin
-        sources << [
-          'assets'
-        ]
-      end
       security.x_frame_options 'DENY'
       security.x_content_type_options 'nosniff'
       security.x_xss_protection '1; mode=block'
@@ -48,11 +36,6 @@ module Api
       controller.prepare do
         # include MyAuthentication # included in all the actions
         # before :authenticate!    # run an authentication before callback
-      end
-
-      view.prepare do
-        include Hanami::Helpers
-        include Api::Assets::Helpers
       end
     end
 

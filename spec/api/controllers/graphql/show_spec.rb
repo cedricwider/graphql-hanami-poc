@@ -1,6 +1,6 @@
-require_relative '../../../../apps/api/controllers/queries_controller/create'
+require_relative '../../../../apps/api/controllers/graphql/show'
 
-RSpec.describe Api::Controllers::QueriesController::Create do
+RSpec.describe Api::Controllers::Graphql::Show do
   let(:action) { described_class.new }
   let(:params) { Hash[] }
 
